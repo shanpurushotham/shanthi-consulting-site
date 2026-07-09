@@ -1,0 +1,63 @@
+---
+const services = [
+  {
+    title: "Operating systems setup",
+    body: "OKRs, quarterly planning, and the operating cadence that keeps leadership aligned as you grow.",
+  },
+  {
+    title: "Fundraising and investor readiness",
+    body: "I've supported a $500K seed, a $13.5M Series A, and a $5M subsidiary raise, and sat across the table during diligence.",
+  },
+  {
+    title: "Org design and hiring",
+    body: "Who to hire, when, and how to avoid the expensive early mistakes.",
+  },
+  {
+    title: "Impact, Analytics, and KPI tracking",
+    body: "Real-time dashboards that give leadership visibility into performance, budget, and team health, even after you can no longer track it all yourself.",
+  },
+];
+---
+
+<section class="section what" id="what-i-do">
+  <div class="wrap">
+    <div class="section-heading">
+      <span class="eyebrow">What I do</span>
+      <h2>What I do</h2>
+    </div>
+    <div class="what__grid">
+      {services.map((service) => (
+        <div class="what__item">
+          <h3>{service.title}</h3>
+          <p>{service.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .what__grid {
+    margin-top: var(--space-4);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4) var(--space-4);
+  }
+
+  .what__item h3 {
+    color: var(--color-ink);
+  }
+
+  .what__item p {
+    margin-top: var(--space-1);
+    color: var(--color-ink-soft);
+    line-height: var(--lh-relaxed);
+  }
+
+  @media (max-width: 45rem) {
+    .what__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-3);
+    }
+  }
+</style>

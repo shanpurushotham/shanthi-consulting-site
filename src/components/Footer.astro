@@ -1,0 +1,37 @@
+---
+import { CONTACT_EMAIL, SITE_NAME } from "../consts";
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p>&copy; {year} {SITE_NAME}</p>
+    <a href={`mailto:${CONTACT_EMAIL}`} class="footer__email">{CONTACT_EMAIL}</a>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .footer__inner {
+    padding-block: var(--space-3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    font-size: var(--fs-small);
+    color: var(--color-ink-soft);
+  }
+
+  .footer__email {
+    text-decoration: none;
+    color: var(--color-ink-soft);
+  }
+
+  .footer__email:hover {
+    color: var(--color-accent);
+  }
+</style>

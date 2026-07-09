@@ -1,0 +1,45 @@
+---
+import { CALENDLY_URL, SITE_NAME } from "../consts";
+---
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a href="#top" class="header__name">{SITE_NAME}</a>
+    <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" class="btn btn--primary header__cta">
+      Book a call
+    </a>
+  </div>
+</header>
+
+<style>
+  .header {
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg);
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--space-2);
+  }
+
+  .header__name {
+    font-family: var(--font-serif);
+    font-size: var(--fs-body-lg);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-ink);
+  }
+
+  .header__cta {
+    padding: 0.6em 1.25em;
+    font-size: var(--fs-small);
+  }
+
+  @media (max-width: 30rem) {
+    .header__name {
+      font-size: var(--fs-body);
+    }
+  }
+</style>

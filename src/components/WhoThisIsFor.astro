@@ -1,0 +1,58 @@
+---
+const points = [
+  "The team is growing fast, and responsibilities need to get out of your head and into real systems.",
+  "You have money for the first time, and you genuinely don't know how to allocate it without wasting it.",
+  "You need to hire — but at the right cadence and the right roles, not just fast.",
+  "You need real transparency into what's happening across teams as you move from a handful of people toward sixty or seventy.",
+];
+---
+
+<section class="section section--alt who">
+  <div class="wrap">
+    <div class="section-heading">
+      <span class="eyebrow">Who this is for</span>
+      <h2>The product works. Investors believed in it. And somehow, everything still runs through you.</h2>
+    </div>
+    <p class="who__lead">This is for you if:</p>
+    <ul class="who__list">
+      {points.map((point) => <li>{point}</li>)}
+    </ul>
+    <p class="who__closing">If that's the season you're in, let's talk.</p>
+  </div>
+</section>
+
+<style>
+  .who__lead {
+    margin-top: var(--space-4);
+    font-size: var(--fs-body-lg);
+    font-weight: 600;
+  }
+
+  .who__list {
+    margin-top: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    max-width: var(--content-narrow);
+  }
+
+  .who__list li {
+    position: relative;
+    padding-left: 1.25em;
+    color: var(--color-ink-soft);
+    line-height: var(--lh-relaxed);
+  }
+
+  .who__list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  .who__closing {
+    margin-top: var(--space-4);
+    font-family: var(--font-serif);
+    font-size: var(--fs-h3);
+  }
+</style>

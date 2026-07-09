@@ -1,0 +1,44 @@
+---
+import { CALENDLY_URL, CONTACT_EMAIL } from "../consts";
+---
+
+<section class="section cta">
+  <div class="wrap cta__inner">
+    <span class="eyebrow">Get in touch</span>
+    <h2>Let's build your operating foundation.</h2>
+    <p class="cta__subhead">
+      If you've just raised and need someone who's done this before, I'd like to hear
+      about it.
+    </p>
+    <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+      Book a 30-minute call
+    </a>
+    <p class="cta__alt">
+      or email me at <a href={`mailto:${CONTACT_EMAIL}`} class="link-underline">{CONTACT_EMAIL}</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .cta__inner {
+    max-width: var(--content-narrow);
+    text-align: left;
+  }
+
+  .cta__subhead {
+    margin-top: var(--space-3);
+    font-size: var(--fs-body-lg);
+    color: var(--color-ink-soft);
+    line-height: var(--lh-relaxed);
+  }
+
+  .cta .btn {
+    margin-top: var(--space-4);
+  }
+
+  .cta__alt {
+    margin-top: var(--space-3);
+    font-size: var(--fs-small);
+    color: var(--color-ink-soft);
+  }
+</style>

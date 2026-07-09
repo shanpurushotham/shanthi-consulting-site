@@ -1,0 +1,44 @@
+---
+import { CALENDLY_URL } from "../consts";
+---
+
+<section class="hero" id="top">
+  <div class="wrap hero__inner">
+    <h1>I help startups build the company around the product, right after they raise.</h1>
+    <p class="hero__subhead">
+      You've got traction and real funding for the first time. I help you build the
+      operating foundation: the systems, hiring, and operating rhythm that hold as you
+      grow. I've built it twice. I can help you build yours.
+    </p>
+    <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+      Book a call
+    </a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-block: var(--space-7) var(--space-6);
+  }
+
+  .hero__inner {
+    max-width: var(--content-narrow);
+  }
+
+  .hero__subhead {
+    margin-top: var(--space-3);
+    font-size: var(--fs-body-lg);
+    color: var(--color-ink-soft);
+    line-height: var(--lh-relaxed);
+  }
+
+  .hero .btn {
+    margin-top: var(--space-4);
+  }
+
+  @media (max-width: 40rem) {
+    .hero {
+      padding-block: var(--space-5) var(--space-4);
+    }
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+const stats = [
+  "5 → 60 team scaled at a VC-backed startup after a $13.5M Series A",
+  "6 new markets opened across West Africa, Asia, and Australia",
+  "$75M treasury deployed across ~100 projects",
+  "$300M portfolio managed across 15+ countries",
+  "2 × $20M health programs launched across Sub-Saharan Africa",
+  "2 new VC-funded business lines launched from scratch",
+  "12 years building operating systems in fast-paced, regulated environments",
+];
+---
+
+<section class="section proof">
+  <div class="wrap">
+    <div class="section-heading">
+      <span class="eyebrow">By the numbers</span>
+      <h2>Proof</h2>
+    </div>
+    <ul class="proof__list">
+      {stats.map((stat) => <li>{stat}</li>)}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .proof__list {
+    margin-top: var(--space-4);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3) var(--space-4);
+  }
+
+  .proof__list li {
+    padding-left: 1.25em;
+    position: relative;
+    line-height: var(--lh-relaxed);
+    color: var(--color-ink-soft);
+  }
+
+  .proof__list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 45rem) {
+    .proof__list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

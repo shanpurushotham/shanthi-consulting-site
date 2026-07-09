@@ -1,0 +1,95 @@
+---
+const testimonials = [
+  {
+    quote:
+      "The defining thing about Shanthi is that she has the ability and interest to learn about whatever problem you're facing in your business. She's the go-to do-it-all fixer. In many ways, she's like what AI assistants are trying to be: a general capability that can just help you solve whatever problem you're facing.",
+    name: "Jay McCarthy",
+    title: "Co-Founder & Chief Security Officer, PrimeVault",
+  },
+  {
+    quote:
+      "Shanthi's superpower is top-tier competence, a true 1%er and force multiplier. That rare combination of intellectual capability plus relentless follow-through makes her exceptionally effective regardless of the business function she's in. We consistently outperformed companies with 10x–20x more resources than we had.",
+    name: "Brandon Rodriguez",
+    title: "Head of Growth, Etherfuse",
+  },
+  {
+    quote:
+      "Shanthi has a true superpower in crafting thoughtful, high-quality proposals and building company culture. She makes people feel seen and heard, and creates an environment of trust and openness. One of our biggest accomplishments together was generating over $500K in revenue for our developer programs and hosting more than 10 global events.",
+    name: "Estefania Ochoa",
+    title: "Founder & Head of Growth, Guava Global",
+  },
+];
+---
+
+<section class="section section--alt testimonials">
+  <div class="wrap">
+    <div class="section-heading">
+      <span class="eyebrow">Testimonials</span>
+      <h2>What it's like to work with me</h2>
+    </div>
+    <div class="testimonials__grid">
+      {testimonials.map((t) => (
+        <figure class="testimonials__item">
+          <blockquote>{t.quote}</blockquote>
+          <figcaption>
+            <span class="testimonials__name">{t.name}</span>
+            <span class="testimonials__title">{t.title}</span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials__grid {
+    margin-top: var(--space-4);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  .testimonials__item {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .testimonials__item blockquote {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: var(--fs-body);
+    line-height: var(--lh-relaxed);
+    color: var(--color-ink);
+  }
+
+  .testimonials__item blockquote::before {
+    content: "\201C";
+    color: var(--color-accent-secondary);
+  }
+
+  .testimonials__item blockquote::after {
+    content: "\201D";
+    color: var(--color-accent-secondary);
+  }
+
+  .testimonials__item figcaption {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--fs-small);
+    color: var(--color-ink-soft);
+  }
+
+  .testimonials__name {
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+
+  @media (max-width: 60rem) {
+    .testimonials__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+  }
+</style>
