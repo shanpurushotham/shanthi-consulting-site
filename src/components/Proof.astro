@@ -1,12 +1,13 @@
 ---
+const intro =
+  "12 years building operating systems in fast-paced, regulated environments — here's some of what that's looked like:";
+
 const stats = [
   "5 → 60 team scaled at a VC-backed startup after a $13.5M Series A",
-  "6 new markets opened across West Africa, Asia, and Australia",
-  "$75M treasury deployed across ~100 projects",
-  "$300M portfolio managed across 15+ countries",
+  "$75M treasury deployed, $300M portfolio managed across 15+ countries",
   "2 × $20M health programs launched across Sub-Saharan Africa",
-  "2 new VC-funded business lines launched from scratch",
-  "12 years building operating systems in fast-paced, regulated environments",
+  "6 new markets opened across West Africa, Asia, and Australia",
+  "Built 2 new revenue lines from scratch — an internal product incubator and a dev-services shop — to open new ARR and scale user growth",
 ];
 ---
 
@@ -16,6 +17,7 @@ const stats = [
       <span class="eyebrow">By the numbers</span>
       <h2>Proof</h2>
     </div>
+    <p class="proof__intro">{intro}</p>
     <ul class="proof__list">
       {stats.map((stat) => <li>{stat}</li>)}
     </ul>
@@ -23,6 +25,12 @@ const stats = [
 </section>
 
 <style>
+  .proof__intro {
+    margin-top: var(--space-4);
+    color: var(--color-ink-soft);
+    line-height: var(--lh-relaxed);
+  }
+
   .proof__list {
     margin-top: var(--space-4);
     display: grid;
