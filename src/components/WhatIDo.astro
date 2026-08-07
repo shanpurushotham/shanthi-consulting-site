@@ -18,7 +18,7 @@ const services = [
   },
   {
     title: "Culture and values",
-    body: "Naming what you actually stand for as a company, and building the practices that keep it real as you go from 10 people to 100.",
+    body: "Defining what you actually stand for, and developing the practices that strengthen culture with scale.",
   },
 ];
 ---
@@ -50,6 +50,8 @@ const services = [
 
   .what__item:last-child {
     grid-column: 1 / -1;
+    max-width: calc(50% - (var(--space-4) / 2));
+    margin-inline: auto;
   }
 
   .what__item h3 {
@@ -66,6 +68,11 @@ const services = [
     .what__grid {
       grid-template-columns: 1fr;
       gap: var(--space-3);
+    }
+
+    .what__item:last-child {
+      max-width: none;
+      margin-inline: 0;
     }
   }
 </style>
