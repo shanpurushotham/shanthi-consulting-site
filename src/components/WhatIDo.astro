@@ -2,7 +2,7 @@
 const services = [
   {
     title: "Operating systems setup",
-    body: "OKRs, quarterly planning, and the operating cadence that keeps leadership aligned as you grow.",
+    body: "OKRs, quarterly planning, the operating cadence that keeps leadership aligned, and the tools that actually fit your stage.",
   },
   {
     title: "Fundraising and investor readiness",
@@ -15,6 +15,10 @@ const services = [
   {
     title: "Impact, Analytics, and KPI tracking",
     body: "Real-time dashboards that give leadership visibility into performance, budget, and team health, even after you can no longer track it all yourself.",
+  },
+  {
+    title: "Culture and values",
+    body: "Naming what you actually stand for as a company, and building the practices that keep it real as you go from 10 people to 100.",
   },
 ];
 ---
@@ -42,6 +46,10 @@ const services = [
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-4) var(--space-4);
+  }
+
+  .what__item:last-child {
+    grid-column: 1 / -1;
   }
 
   .what__item h3 {
